@@ -1,4 +1,4 @@
-name: #build and push an image to dockerhub
+name: build and push a docker image to dockerhub
 on: #what you want to build on 
   push: #push from where
     branch:
