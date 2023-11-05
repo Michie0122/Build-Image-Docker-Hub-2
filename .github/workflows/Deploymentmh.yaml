@@ -23,7 +23,7 @@ jobs: #job to be on an image
       - name: tag the docker image #to run the image you tag the image
         run: docker tag $IMAGE_NAME $DOCKERHUB_REPOSITORY:$IMAGE_NAME #code to tag an image AND WHERE YOU ARE TAGGING IT TOO
       - name: push to dockerhub #push to docker hub
-        run: docker push DOCKERHUB_repository:$IMAGE_NAME
+        run: docker push $DOCKERHUB_REPOSITORY:$IMAGE_NAME
 
 
 
