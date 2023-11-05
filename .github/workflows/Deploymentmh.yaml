@@ -1,4 +1,4 @@
-name: build and push an image to dockerhub
+name: #build and push an image to dockerhub
 on: #what you want to build on 
   push: #push from where
     branch:
@@ -19,7 +19,7 @@ jobs: #job to be on an image
           username: ${{secrets.DOCKERHUB_USERNAME}} #secrets coming form dockerhub/ your credentials
           password: ${{secrets.DOCKERHUB_TOKEN}} #username and token are your variables
       - name: build the docker image #build the docker image
-        run: docker build -t  $IMAGE_NAME #command to build an image
+        run: docker build -t $IMAGE_NAME #command to build an image
       - name: tag the docker image #to run the image you tag the image
         run: docker tag $IMAGE_NAME DOCKERHUB_REPOSITORY:$IMAGE_NAME #code to tag an image AND WHERE YOU ARE TAGGING IT TOO
       - name: push to dockerhub #push to docker hub
